@@ -1,0 +1,22 @@
+<%- include("partials/header"); -%>
+
+<h1>Home </h1>
+<p>  <%= StratingContent%> </p>
+
+
+<!-- <%  for(let i=0;i<posts.length;i++){ %>
+   <% console.log(posts[i].title); %>
+<% }  %> -->
+
+<!-- we have foreach method instead of for loop  so -->
+
+<% posts.forEach(function(element){  %>
+  <h1> <%=element.title %> </h1>
+  <p> 
+      <%=(element.content).substring(0,100) +"....." %>
+      <a href="posts/<%=element.title%>">Read More</a>
+   </p>
+<%  }); %>
+
+
+<%- include("partials/footer"); -%>
